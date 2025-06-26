@@ -14,6 +14,17 @@ const dashboardModules = [
 ];
 
 export default function DashboardHome() {
+  // Fallback error message if something goes wrong
+  if (!dashboardModules || dashboardModules.length === 0) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-red-50">
+        <p className="text-red-600 text-lg font-semibold">
+          😵 Oops! Dashboard modules failed to load. Please try refreshing the page.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 p-10">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-6">🎓 GradGear Dashboard</h1>
@@ -24,7 +35,6 @@ export default function DashboardHome() {
           <Link key={module.name} href={module.path}>
             <div className="bg-white rounded-xl shadow-md p-6 text-center hover:scale-105 transform transition duration-300 cursor-pointer border border-gray-200">
               <h2 className="text-2xl font-semibold text-indigo-600 mb-2">{module.name}</h2>
-              
             </div>
           </Link>
         ))}
