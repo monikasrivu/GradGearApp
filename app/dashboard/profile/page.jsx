@@ -27,7 +27,7 @@ export default function ProfilePage() {
     });
 
     if (res.ok) {
-      setMessage("Profile Saved Successfully!");
+      setMessage("🎉Profile Saved Successfully!");
       setFormData({
         name: "",
         email: "",
@@ -37,7 +37,7 @@ export default function ProfilePage() {
         year: "",
       });
     } else {
-      setMessage("Error saving profile.");
+      setMessage("👎Error saving profile.");
     }
   };
 
