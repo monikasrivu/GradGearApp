@@ -1,20 +1,27 @@
-# GradGear - Student Portfolio App
+# 🎓 GradGear - Student Portfolio App
 
-GradGear is a web app to help students showcase their profiles, academics, projects, internships, skills, and social links. It also includes an admin dashboard for managing student data.
+GradGear is a sleek and responsive web app designed to help students professionally showcase their **profile, academics, projects, internships, skills, certifications, resume, and social links** — all in one place.
+
+Made with ❤️ at Skillmate.
 
 ---
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+## 📌 Features
 
-## Getting Started
+- 🔐 Google Login with NextAuth
+- 🧑‍🎓 Profile, Academics, Projects, Internships
+- 📜 Certifications, Resume Upload (PDF)
+- 🛠️ Skills & Social Links
+- 📊 Analytics Chart using Recharts
+- 🌙 Emoji-based feedback, animations, and responsive UI
+- 🧑‍💼 Admin dashboard to view/edit student data
 
-First, run the development server:
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/monikasrivu/GradGearApp.git
+cd GradGearApp
