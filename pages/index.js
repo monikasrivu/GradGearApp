@@ -1,3 +1,4 @@
+import React from "react"; // ✅ Required to use JSX
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/router"; // ✅ Import useRouter
 

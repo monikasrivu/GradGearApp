@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
+import TextInput from "@/components/TextInput"; // ✅ Import reusable input
 
 export default function ProfilePage() {
   const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ export default function ProfilePage() {
     });
 
     if (res.ok) {
-      setMessage("🎉Profile Saved Successfully!");
+      setMessage("🎉 Profile Saved Successfully!");
       setFormData({
         name: "",
         email: "",
@@ -37,7 +38,7 @@ export default function ProfilePage() {
         year: "",
       });
     } else {
-      setMessage("👎Error saving profile.");
+      setMessage("👎 Error saving profile.");
     }
   };
 
@@ -46,15 +47,11 @@ export default function ProfilePage() {
       <h2 className="text-2xl font-bold text-center mb-4">Profile Form</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         {["name", "email", "phone", "dob", "department", "year"].map((field) => (
-          <input
+          <TextInput
             key={field}
-            type="text"
             name={field}
-            placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
             value={formData[field]}
             onChange={handleChange}
-            className="w-full px-4 py-2 border rounded-md"
-            required
           />
         ))}
         <button

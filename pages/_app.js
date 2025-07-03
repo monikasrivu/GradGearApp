@@ -1,4 +1,5 @@
-import '../styles/globals.css';  // ❗ Change this line — use relative path
+import React from "react"; // ✅ Add this line
+import '../styles/globals.css';
 import { SessionProvider } from "next-auth/react";
 
 export default function App({ Component, pageProps }) {
