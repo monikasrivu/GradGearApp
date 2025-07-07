@@ -6,6 +6,12 @@ Made with ❤️ at Skillmate.
 
 ---
 
+## 📸 Preview
+
+![Dashboard Screenshot](./public/dashboard.png)
+
+---
+
 ## 📌 Features
 
 - 🔐 Google Login with NextAuth
